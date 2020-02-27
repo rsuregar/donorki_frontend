@@ -11,8 +11,6 @@ import Box from '@material-ui/core/Box';
 import Typography from '@material-ui/core/Typography';
 import { Link } from "react-router-dom";
 
-
-
 const useStyles = makeStyles(theme => ({
     root: {
       flexGrow: 1,
@@ -46,14 +44,9 @@ const useStyles = makeStyles(theme => ({
     }
   }));
 
-export default function PostSlider (data) {
+export default function EventSlider (data) {
 
-    const [value, setValue] = React.useState(data.data);
-    // React.useEffect(() => {
-    //     setValue(data)
-    // }, [])
-
-    console.log(value)
+    const [value] = React.useState(data.data);
     const classes = useStyles();
 
     const settings = {
@@ -113,7 +106,8 @@ export default function PostSlider (data) {
   
     return (
         
-    <div style={{backgroundColor:'#fff', borderRadius:10}}>
+    // <div style={{backgroundColor:'#fff', borderRadius:10}}>
+    <div style={{}}>
     <Box width="100%">
     <Slider {...settings}>
 

@@ -48,12 +48,7 @@ const useStyles = makeStyles(theme => ({
 
 export default function PostSlider (data) {
 
-    const [value, setValue] = React.useState(data.data);
-    // React.useEffect(() => {
-    //     setValue(data)
-    // }, [])
-
-    console.log(value)
+    const [value] = React.useState(data.data);
     const classes = useStyles();
 
     const settings = {
@@ -113,7 +108,8 @@ export default function PostSlider (data) {
   
     return (
         
-    <div style={{backgroundColor:'#fff', borderRadius:10}}>
+    <div style={{}}>
+    {/* <div style={{backgroundColor:'#fff', borderRadius:10}}> */}
     <Box width="100%">
     <Slider {...settings}>
 

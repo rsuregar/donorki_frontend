@@ -13,6 +13,7 @@ import Box from '@material-ui/core/Box';
 import {Link} from 'react-router-dom';
 // import { makeStyles } from '@material-ui/core/styles';
 import ChatIcon from '@material-ui/icons/Chat'
+import RequestList from '../component/requestList';
 
 // const useStyles = makeStyles({
 //   root: {
@@ -47,6 +48,37 @@ const data = [
     slug: '/tentang-donor-darah/manfaat-donor-darah',
     title: 'Manfaat Donor Darah',
     image:'https://via.placeholder.com/600x250.png/27ae60/FFFFFF'
+  },
+];
+
+const request = [
+  {
+    slug: '/permintaan-donor-pengganti/apa-itu-donor-darah',
+    by: 'Arya Permana',
+    blood:'A+',
+    contact: '6285342116212',
+    desc: 'Membutuhkan Darah TB sebanyak 6 Kantong'
+  },
+  {
+    slug: '/permintaan-donor-pengganti/syarat-donor-darah',
+    by: 'Ardi Permata',
+    blood:'B+',
+    contact: '6285342116212',
+    desc: 'Membutuhkan Darah TB sebanyak 6 Kantong'
+  },
+  {
+    slug: '/permintaan-donor-pengganti/hari-donor-darah',
+    by: 'Argo Penangsang',
+    blood:'AB+',
+    contact: '6285342116212',
+    desc: 'Membutuhkan Darah TB sebanyak 6 Kantong'
+  },
+  {
+    slug: '/permintaan-donor-pengganti/manfaat-donor-darah',
+    by: 'Arman Maulana',
+    blood:'O+',
+    contact: '6285342116212',
+    desc: 'Membutuhkan Darah TB sebanyak 6 Kantong'
   },
 ];
 
@@ -98,15 +130,10 @@ export default function Home() {
       <Link style={{color:'#ee5253', textDecoration:'none'}} to="/permintaan-donor-darah-darurat">Lihat semua</Link>
       </div>
       <Divider /></Typography>
-      <Paper square={false} style={{padding:10, marginTop:10, marginBottom:10}}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Paper>
-        <Paper square={false} style={{padding:10, marginTop:10, marginBottom:10}}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        </Paper>
+      <RequestList data={request}/>
     </Grid>
 
-    <Grid style={{padding:20, marginTop:0}}>
+    <Grid style={{padding:20, marginTop:'-30px'}}>
     <Typography gutterBottom variant="subtitle1">Tahukah kamu? 
     <div style={{float:'right'}}>
     <Link style={{color:'#ee5253', textDecoration:'none'}} to="/tentang-donor-darah">Baca semua</Link>
